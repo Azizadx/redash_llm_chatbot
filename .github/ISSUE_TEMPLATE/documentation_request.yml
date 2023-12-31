@@ -1,29 +1,22 @@
-name: 📖 Propose Documentation
-description: Help us make our documentation clearer, more comprehensive, and user-friendly.
-labels: ["type: documentation", "LLM Chatbot"]
+name: 📖 Report Docs Issue
+description: Suggest an addition or modification to the documentation
+labels: ["type: documentation"]
 body:
   - type: dropdown
-    id: documentation-area
     attributes:
-      label: Which area of documentation needs improvement?
+      label: Change Type
+      description: What type of change are you proposing?
       options:
-        - Installation
-        - Usage
-        - Configuration
-        - Troubleshooting
-        - API Reference
-        - Other (please specify)
+        - Addition
+        - Correction
+        - Removal
+        - Cleanup (formatting, typos, etc.)
+    validations:
+      required: true
+
   - type: textarea
-    id: documentation-issue
     attributes:
-      label: Describe the issue or suggestion for improvement.
-      validations:
-        required: true
-  - type: textarea
-    id: proposed-changes
-    attributes:
-      label: If you have specific changes in mind, please describe them here.
-  - type: textarea
-    id: references
-    attributes:
-      label: Provide links to relevant documentation sections or external resources.
+      label: Proposed Changes
+      description: Describe the proposed changes and why they are necessary
+    validations:
+      required: true
