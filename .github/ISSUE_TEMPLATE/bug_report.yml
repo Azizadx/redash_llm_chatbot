@@ -1,44 +1,39 @@
-name: Report a Bug in Redash LLM Chatbot
-description: Help us identify and fix issues to improve the chatbot experience.
-labels: ["type: bug", "LLM Chatbot"]
+# Borrowed from https://github.com/skeletonlabs/skeleton
+name: 🐛 Bug Report
+description: Report an issue or bug
+labels: ["type: bug"]
 body:
-  - type: dropdown
-    id: bug-category
+  - type: markdown
     attributes:
-      label: What type of bug is this?
-      options:
-        - Functionality
-        - Performance
-        - Security
-        - Interface
-        - Other (please specify)
+      value: |
+        Before submitting a bug report, ensure you're running the latest version of the dependencies (`bits-ui` & `formsnap`/`sveltekit-superforms` if you're using forms). If you have a question, please ask it in the [Discussions](https://github.com/huntabyte/shadcn-svelte/discussions) or [Discord](https://hbyt.us/discord), not here.
   - type: textarea
-    id: bug-description
     attributes:
-      label: Describe the bug in detail, including steps to reproduce.
-      validations:
-        required: true
+      label: Current Behavior
+      description: A description of what you're experiencing.
+    validations:
+      required: true
   - type: textarea
-    id: expected-behavior
     attributes:
-      label: Describe the expected behavior.
+      label: Expected Behavior
+      description: A description of what you're experiencing.
+    validations:
+      required: true
   - type: textarea
-    id: actual-behavior
     attributes:
-      label: Describe the actual behavior.
+      label: Steps To Reproduce
+      description: Describe how to reproduce the issue. The best way to do this is to provide a link to a reproduction using the [reproduction template](https://shadcn-svelte.com/repro)
+      placeholder: |
+        1. Using this component...
+        2. With these properties...
+        3. Click '...'
+        4. See error...
+    validations:
+      required: true
   - type: textarea
-    id: steps-to-reproduce
     attributes:
-      label: Provide a clear list of steps to reproduce the bug.
-  - type: textarea
-    id: environment
-    attributes:
-      label: Specify the environment details
-        - Redash version
-        - Connected databases
-        - Browser/OS (if applicable)
-        - Other relevant information
-  - type: textarea
-    id: references
-    attributes:
-      label: Provide relevant links or additional information.
+      label: More Information
+      description: |
+        Provide relevant links or additionl information.
+    validations:
+      required: false
