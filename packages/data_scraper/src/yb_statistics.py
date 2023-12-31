@@ -87,7 +87,7 @@ class YTstats:
             "video_data": self.video_data
         }}
         channel_title = self.video_data.popitem()[1].get(
-            'channelTitle', self.channel_id)  # TODO: get the channel name from data
+            'channelTitle', self.channel_id)
         channel_title = channel_title.replace(" ", "_").lower()
         file_name = channel_title + '.json'
         with open(file_name, 'w') as f:
