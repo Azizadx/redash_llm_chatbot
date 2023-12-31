@@ -1,8 +1,9 @@
 # Description
 Describe the specific changes made in this pull request, such as adding natural language querying, automated insight generation, SQL generation, visualization creation, or dashboard building.
 
-Fixes # (issue number eg: Fixes #123 , if it is not there create a new issue then add it here)
 
+## Fixes #
+  (issue number eg: Fixes #123, if it is not there create a new issue then add it here)
 
 ## Type of change
 
@@ -28,11 +29,11 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 
 # Checklist:
 
-[ ] Code follows project style guidelines
-[ ] Code is reviewed by Nasrallah
-[ ] Code commented in complex areas
-[ ] Documentation updated accordingly (if applicable) 
-[ ] No new warnings generated
-[ ] Tests added to prove fix/feature effectiveness
-[ ] New and existing unit tests pass locally
-[ ] Dependent changes merged and published (if applicable)
+- [ ] Code follows project style guidelines
+- [ ] Code is reviewed by Nasrallah
+- [ ] Code commented in complex areas
+- [ ] Documentation updated accordingly (if applicable) 
+- [ ] No new warnings generated
+- [ ] Tests added to prove fix/feature effectiveness
+- [ ] New and existing unit tests pass locally
+- [ ] Dependent changes merged and published (if applicable)
