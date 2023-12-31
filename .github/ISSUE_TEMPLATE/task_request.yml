@@ -13,14 +13,14 @@ body:
     - type: dropdown
       id: task_category
       attributes:
-          label: What type of pull request would this be?
+          label: What type of task is this?
           options:
-              - "Development"
-              - "Testing"
-              - "Bug Fix"
-              - "Docs"
-              - "Research"
-              - "Other"
+              - "development"
+              - "testing"
+              - "Bug"
+              - "docs"
+              - "research"
+              - "other"
     - type: textarea
       id: references
       attributes:
