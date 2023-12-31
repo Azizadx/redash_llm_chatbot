@@ -1,22 +1,29 @@
-name: 📖 Report Docs Issue
-description: Suggest an addition or modification to the documentation
-labels: ["type: documentation"]
+name: 📖 Propose Documentation Improvement for Redash LLM Chatbot
+description: Help us make our documentation clearer, more comprehensive, and user-friendly.
+labels: ["type: documentation", "LLM Chatbot"]
 body:
   - type: dropdown
+    id: documentation-area
     attributes:
-      label: Change Type
-      description: What type of change are you proposing?
+      label: Which area of documentation needs improvement?
       options:
-        - Addition
-        - Correction
-        - Removal
-        - Cleanup (formatting, typos, etc.)
-    validations:
-      required: true
-
+        - Installation
+        - Usage
+        - Configuration
+        - Troubleshooting
+        - API Reference
+        - Other (please specify)
   - type: textarea
+    id: documentation-issue
     attributes:
-      label: Proposed Changes
-      description: Describe the proposed changes and why they are necessary
-    validations:
-      required: true
+      label: Describe the issue or suggestion for improvement.
+      validations:
+        required: true
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: If you have specific changes in mind, please describe them here.
+  - type: textarea
+    id: references
+    attributes:
+      label: Provide links to relevant documentation sections or external resources.
