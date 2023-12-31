@@ -1,0 +1,44 @@
+name: Report a Bug in Redash LLM Chatbot
+description: Help us identify and fix issues to improve the chatbot experience.
+labels: ["type: bug", "LLM Chatbot"]
+body:
+  - type: dropdown
+    id: bug-category
+    attributes:
+      label: What type of bug is this?
+      options:
+        - Functionality
+        - Performance
+        - Security
+        - Interface
+        - Other (please specify)
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug in detail, including steps to reproduce.
+      validations:
+        required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Describe the expected behavior.
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Describe the actual behavior.
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Provide a clear list of steps to reproduce the bug.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Specify the environment details:
+        - Redash version
+        - Connected databases
+        - Browser/OS (if applicable)
+        - Other relevant information
+  - type: textarea
+    id: references
+    attributes:
+      label: Provide relevant links or additional information.
