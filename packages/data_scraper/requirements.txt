@@ -1,6 +1,6 @@
 ## NOTE: Don't change this file
 ### In this file content all need dependencies for implementation
-### Of data scrapering for this project
+### Of data scrapeing for this project
 
 requests
 tqdm
