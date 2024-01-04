@@ -1,0 +1,11 @@
+
+# sources.yml
+version: 2
+
+sources:
+  - name: youtube
+    database: ariflow-tutorial
+    tables:
+      - name: raw_cities
+      - name: raw_gender
+      - name: raw_total
