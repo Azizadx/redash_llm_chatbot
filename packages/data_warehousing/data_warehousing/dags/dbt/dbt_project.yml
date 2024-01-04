@@ -1,0 +1,9 @@
+# dbt_project.yml
+
+name: 'youtube'
+
+profile: 'youtube'
+
+models:
+  youtube:
+    materialized: table
