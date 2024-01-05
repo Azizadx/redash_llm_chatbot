@@ -38,12 +38,15 @@ services:
     ports:
       - '6379:6379'
   postgres:
-    image: postgres:9.6-alpine
-    env_file: .env
+    image: postgres
+    environment:
+      - POSTGRES_USER=redash2
+      - POSTGRES_PASSWORD=redashpssd
+      - POSTGRES_DB=redashDB    
     ports:
-      - "5435:5432"
+      - "5440:5432"
     volumes:
-      - /opt/redash/postgres-data:/var/lib/postgresql/data
+      - ./db:/data
     restart: always
   # nginx:
   #   image: redash/nginx:latest
