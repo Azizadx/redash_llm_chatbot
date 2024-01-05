@@ -39,12 +39,10 @@ services:
       - '6379:6379'
   postgres:
     image: postgres
-    environment:
-      - POSTGRES_USER=redash2
-      - POSTGRES_PASSWORD=redashpssd
-      - POSTGRES_DB=redashDB    
+    env_file:
+      - .env   
     ports:
-      - "5440:5432"
+      - "5435:5432"
     volumes:
       - ./db:/data
     restart: always
