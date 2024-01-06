@@ -5,3 +5,4 @@
 requests
 tqdm
 python-dotenv
+openai==1.6.1
