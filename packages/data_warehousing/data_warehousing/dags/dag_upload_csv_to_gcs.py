@@ -31,7 +31,7 @@ def csv_2_gcs():
     )
     upload_view_gender_data_csv_to_gcs = LocalFilesystemToGCSOperator(
         task_id='upload_view_gender_data_csv_to_gcs',
-        src='include/data/Viewership by Date/viewer_date.csv',
+        src='include/data/Viewer gender/viewer_date.csv',
         dst='raw/viewer_gender.csv',
         bucket='airflow-tut',
         gcp_conn_id='gcp',

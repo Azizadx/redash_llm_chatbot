@@ -61,4 +61,4 @@ def main():
 
 # Run the application
 if __name__ == '__main__':
-    app.run(debug=True)  # Set debug=True for development
+    app.run()  # Set debug=True for development
