@@ -19,6 +19,7 @@ main_app = Blueprint('main', __name__)
 # Route for handling user messages
 @main_app.route('/chat', methods=['POST'])
 def main():
+    print('in')
     data = request.json
     system_message = f"""
     <prompts>
@@ -52,6 +53,6 @@ def main():
     # pretty_print_conversation(messages)
 
     if results is not None:
-        return jsonify({"sql_query": assistant_message["tool_calls"][0]['id']}, {"assistant_response": results})
+        return jsonify(results)
     else:
-        return jsonify({"assistant_response": """I'm sorry, but as an AI language model, I don't have access to personal data about individuals unless it has been shared with me in the course of our conversation. I am designed to respect privacy and confidentiality. If "Aziza" refers to a public figure or a concept that is widely known and within my training data, I might be able to provide information. Otherwise, I would need more context to understand who or what "Aziza" refers to. Can you provide more details or clarify your question?"""})
+        return jsonify("""I'm sorry, but as an AI language model, I don't have access to personal data about individuals unless it has been shared with me in the course of our conversation. I am designed to respect privacy and confidentiality. If "Aziza" refers to a public figure or a concept that is widely known and within my training data, I might be able to provide information. Otherwise, I would need more context to understand who or what "Aziza" refers to. Can you provide more details or clarify your question?""")
