@@ -34,7 +34,7 @@ def chat_completion_request(messages, tools=None, tool_choice=None, model="gpt-4
 
 
 def get_gpt_response(system_message, user_message):
-    client = OpenAI()
+    client = OpenAI(api_key=OPENAI_API_KEY)
     response = client.chat.completions.create(
         model="gpt-4-1106-preview",
         messages=[
