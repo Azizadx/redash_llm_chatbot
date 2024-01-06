@@ -6,3 +6,4 @@ tenacity
 requests
 termcolor
 python-dotenv
+waitress
