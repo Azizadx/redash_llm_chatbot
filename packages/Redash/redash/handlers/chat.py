@@ -6,8 +6,9 @@ import os
 from openai import OpenAI
 VARIABLE_KEY = os.environ.get("OPENAI_API_KEY")
 client = OpenAI(
-  api_key=VARIABLE_KEY
+    api_key=VARIABLE_KEY
 )
+
 
 class ChatResource(BaseResource):
     def post(self):
