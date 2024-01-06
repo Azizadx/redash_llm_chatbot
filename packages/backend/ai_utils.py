@@ -2,8 +2,8 @@ from tenacity import retry, wait_random_exponential, stop_after_attempt
 import os
 import requests
 from dotenv import load_dotenv, find_dotenv
-from openai import OpenAI
 import openai
+from openai import OpenAI
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 openai.api_key = OPENAI_API_KEY
@@ -34,7 +34,7 @@ def chat_completion_request(messages, tools=None, tool_choice=None, model="gpt-4
 
 
 def get_gpt_response(system_message, user_message):
-    client = OpenAI()
+    client = OpenAI(api_key=OPENAI_API_KEY)
     response = client.chat.completions.create(
         model="gpt-4-1106-preview",
         messages=[

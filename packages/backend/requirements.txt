@@ -1,9 +1,10 @@
 flask
 google-cloud-bigquery
-openai
+openai=1.2.0
 tiktoken
 tenacity
 requests
 termcolor
 python-dotenv
 waitress
+gunicorn
