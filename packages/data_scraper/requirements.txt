@@ -1,7 +1,0 @@
-## NOTE: Don't change this file
-### In this file content all need dependencies for implementation
-### Of data scrapeing for this project
-
-requests
-tqdm
-python-dotenv
