@@ -1,6 +1,6 @@
 flask
 google-cloud-bigquery
-openai=1.2.0
+openai
 tiktoken
 tenacity
 requests
