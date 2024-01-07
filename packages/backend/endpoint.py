@@ -52,8 +52,9 @@ def main():
         })
 
     # pretty_print_conversation(messages)
-
+    res = json.loads(assistant_message["tool_calls"][0]["function"]["arguments"])[
+        "query"]
     if results is not None:
-        return json.loads(assistant_message["tool_calls"][0]["function"]["arguments"]["query"])
+        return res
     else:
         return jsonify("""am sorry i couldn't do the task ;(""")
