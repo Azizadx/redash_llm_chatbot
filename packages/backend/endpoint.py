@@ -1,3 +1,4 @@
+import json
 import os
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify, Blueprint
@@ -53,6 +54,6 @@ def main():
     # pretty_print_conversation(messages)
 
     if results is not None:
-        return jsonify(results)
+        return jsonify(json.loads(assistant_message["tool_calls"][0]["function"]["arguments"])["query"], results)
     else:
         return jsonify("""am sorry i couldn't do the task ;(""")
